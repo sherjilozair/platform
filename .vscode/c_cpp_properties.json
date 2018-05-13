@@ -11,8 +11,9 @@
             "includePath": [
                 "${workspaceFolder}",
                 "${workspaceFolder}/include",
-                "${workspaceFolder}/external/libs/osx/SDL2_image.framework/Headers",
-                "${workspaceFolder}/external/libs/osx/SDL2.framework/Headers"
+                "${workspaceFolder}/external/osx/SDL2_image.framework/Headers",
+                "${workspaceFolder}/external/osx/SDL2.framework/Headers",
+                "${workspaceFolder}/external/glm"
             ],
             "defines": [],
             "macFrameworkPath": [

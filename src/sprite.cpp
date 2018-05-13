@@ -2,6 +2,7 @@
 #include "sprite.hpp"
 #include <OpenGL/gl3.h>
 
+
 namespace gfx
 {
   Rectangle::Rectangle(int x, int y, int w, int h) : x(x), y(y), w(w), h(h) {}
