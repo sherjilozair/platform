@@ -11,11 +11,11 @@ namespace gfx
   Sprite::Sprite(const Texture &texture, Rectangle src):texture(texture)
   {
     float vertices[] = {
-        // positions                                  // texture coords
-        1.0, 1.0,                       ((float)src.x + src.w) / texture.width, 1.0 - ((float)src.y + src.h) / texture.height,
-        1.0, -1.0,                      ((float)src.x + src.w) / texture.width, 1 - ((float)src.y) / texture.height,
-        -1.0, -1.0,                     ((float)src.x) / texture.width, 1 - ((float)src.y) / texture.height,
-        -1.0, 1.0,                      ((float)src.x) / texture.width, 1 - ((float)src.y + src.h) / texture.height
+        // positions    // texture coords
+        1.0, 1.0,                       1.0, 0.0,
+        1.0, -1.0,                      1.0, 1.0,
+        -1.0, -1.0,                     0.0, 1.0,
+        -1.0, 1.0,                      0.0, 0.0
     };
     unsigned int indices[] = {
         0, 1, 3, // first triangle
@@ -42,10 +42,10 @@ namespace gfx
     glEnableVertexAttribArray(1);
 
     glBindTexture(GL_TEXTURE_2D, texture._id);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
   }
 

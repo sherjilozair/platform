@@ -9,9 +9,9 @@
 int main(){
   sys::Window window("Retro", 320 * 4, 180 * 4);
   gfx::Texture texture("assets/sprites.png");
-  gfx::Sprite sprite(texture, gfx::Rectangle(0, 0, 128, 64));
+  gfx::Sprite sprite(texture, gfx::Rectangle(0, 0, 64, 64));
   gfx::Shader shader = gfx::Shader::DefaultShader();
-  glClearColor(0.15, 0.12, 0.15, 1.0);
+  glClearColor(0.0, 0.0, 0.0, 1.0);
 
   while (window.is_open())
   {

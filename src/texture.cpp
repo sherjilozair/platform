@@ -1,6 +1,7 @@
 #include "texture.hpp"
 #include <SDL_image.h>
 #include <OpenGL/gl3.h>
+#include <OpenGL/gl3ext.h>
 #include <iostream>
 
 namespace gfx{
@@ -16,9 +17,8 @@ namespace gfx{
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    const GLint srcformat = tex->format->BytesPerPixel == 3? GL_RGB: GL_RGBA;
-    const GLint dstformat = tex->format->BytesPerPixel == 3? GL_RGB: GL_RGBA;
-    glTexImage2D(GL_TEXTURE_2D, 0, dstformat, tex->w, tex->h, 0, srcformat, GL_UNSIGNED_BYTE, tex->pixels);
+    // source format is GL_BGRA because image creation tools decided to be innovative.
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, tex->w, tex->h, 0, GL_BGRA, GL_UNSIGNED_BYTE, tex->pixels);
     SDL_FreeSurface(tex);
     glBindTexture(GL_TEXTURE_2D, 0);
   }
