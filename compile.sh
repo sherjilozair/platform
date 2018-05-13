@@ -1,0 +1,2 @@
+g++ src/*.cpp examples/01-sprite.cpp -Iinclude -Iexternal/libs/osx/SDL2.framework/Headers -Iexternal/libs/osx/SDL2_image.framework/Headers -Fexternal/libs/osx -framework SDL2 -framework SDL2_image -framework OpenGL -o examples/01-sprite
+install_name_tool -add_rpath "@loader_path/../external/libs/osx/" examples/01-sprite
