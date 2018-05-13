@@ -2,7 +2,7 @@
 #include <window.hpp>
 #include <OpenGL/gl3.h>
 
-namespace sys{
+namespace pl{
   Window::Window(const std::string& title, unsigned int width, unsigned int height): width(width), height(height)
   {
     SDL_Init(SDL_INIT_EVERYTHING);
@@ -21,7 +21,7 @@ namespace sys{
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   }
-  void Window::draw(gfx::Sprite& sprite, gfx::Shader& shader)
+  void Window::draw(pl::Sprite& sprite, pl::Shader& shader)
   {
     shader.bind();
     sprite.draw();

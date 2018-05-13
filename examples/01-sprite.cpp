@@ -7,10 +7,10 @@
 #include <OpenGL/gl3.h>
 
 int main(){
-  sys::Window window("Retro", 320 * 4, 180 * 4);
-  gfx::Texture texture("assets/sprites.png");
-  gfx::Sprite sprite(texture, gfx::Rectangle(0, 0, 64, 64));
-  gfx::Shader shader = gfx::Shader::DefaultShader();
+  pl::Window window("Retro", 320 * 4, 180 * 4);
+  pl::Texture texture("assets/sprites.png");
+  pl::Sprite sprite(texture, pl::Rectangle(0, 0, 64, 64));
+  pl::Shader shader = pl::Shader::DefaultShader();
   glClearColor(0.0, 0.0, 0.0, 1.0);
 
   while (window.is_open())

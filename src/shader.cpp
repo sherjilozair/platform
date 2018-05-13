@@ -3,7 +3,7 @@
 
 #define CODE(...) #__VA_ARGS__
 
-namespace gfx{
+namespace pl{
 
   Shader::Shader(const std::string& vs_code, const std::string& fs_code){
     unsigned int _vs_id = glCreateShader(GL_VERTEX_SHADER);

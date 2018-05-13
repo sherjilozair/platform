@@ -4,7 +4,7 @@
 #include <OpenGL/gl3ext.h>
 #include <iostream>
 
-namespace gfx{
+namespace pl{
   Texture::Texture(const std::string& path){
     SDL_Surface *tex = IMG_Load(path.c_str());
     this->width = tex->w;

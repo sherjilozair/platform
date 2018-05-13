@@ -2,7 +2,7 @@
 #include "texture.hpp"
 #include <string>
 
-namespace gfx{
+namespace pl{
   class Texture{
     public:
     unsigned int width, height, n_channels;

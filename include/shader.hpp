@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace gfx{
+namespace pl{
   class Shader{
     public:
     unsigned int _id;

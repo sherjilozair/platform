@@ -5,7 +5,7 @@
 #include <shader.hpp>
 #include <sprite.hpp>
 
-namespace sys{
+namespace pl{
   class Window{
     public:
     SDL_Window* window;
@@ -13,7 +13,7 @@ namespace sys{
     int width, height;
     Window(const std::string&, unsigned int, unsigned int);
     ~Window();
-    void draw(gfx::Sprite&, gfx::Shader&);
+    void draw(pl::Sprite&, pl::Shader&);
     bool is_open();
   };
 }

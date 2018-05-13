@@ -6,7 +6,7 @@
 #include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include <glm/gtc/constants.hpp> // glm::pi
 
-namespace gfx{
+namespace pl{
   class Rectangle
   {
     public:

@@ -3,7 +3,7 @@
 #include <OpenGL/gl3.h>
 
 
-namespace gfx
+namespace pl
 {
   Rectangle::Rectangle(int x, int y, int w, int h) : x(x), y(y), w(w), h(h) {}
 
@@ -55,4 +55,4 @@ namespace gfx
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
   }
 
-} // namespace gfx
+} // namespace pl
