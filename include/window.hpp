@@ -4,6 +4,7 @@
 #include <SDL_image.h>
 #include <shader.hpp>
 #include <sprite.hpp>
+#include <color.hpp>
 
 namespace pl{
   class Window{
@@ -14,6 +15,8 @@ namespace pl{
     Window(const std::string&, unsigned int, unsigned int);
     ~Window();
     void draw(pl::Sprite&, pl::Shader&);
-    bool is_open();
+    bool isOpen();
+    void display();
+    void clear(const Color&);
   };
 }

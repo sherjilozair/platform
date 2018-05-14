@@ -1,6 +1,7 @@
 #include <string>
 #include <window.hpp>
 #include <OpenGL/gl3.h>
+#include <color.hpp>
 
 namespace pl{
   Window::Window(const std::string& title, unsigned int width, unsigned int height): width(width), height(height)
@@ -27,9 +28,20 @@ namespace pl{
     sprite.draw();
     shader.unbind();
   }
-  bool Window::is_open()
+  bool Window::isOpen()
   {
     return !SDL_QuitRequested();
+  }
+
+  void Window::display()
+  {
+    SDL_GL_SwapWindow(this->window);
+  }
+
+  void Window::clear(const Color& color)
+  {
+    glClearColor(color.r / 255.f, color.g / 255.f, color.b / 255.f, color.a / 255.f);
+    glClear(GL_COLOR_BUFFER_BIT);
   }
 
   Window::~Window()
