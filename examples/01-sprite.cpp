@@ -2,7 +2,8 @@
 #include <OpenGL/gl3.h>
 #include <platform.hpp>
 
-int main(){
+int main()
+{
   pl::Window window("Retro", 320 * 4, 180 * 4);
   pl::Texture texture("assets/sprites.png");
   pl::Sprite sprite(texture, pl::Rectangle(0, 0, 128, 64));

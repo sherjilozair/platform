@@ -9,4 +9,3 @@
 #include <texture.hpp>
 #include <sprite.hpp>
 #include <window.hpp>
-
